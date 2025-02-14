@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karen y Alex - Un Viaje por Nuestro Amor</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;700&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, #6a0dad, #ffd700);
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+        }
+        
+        .title {
+            font-size: 4rem;
+            font-weight: bold;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-in-out;
+            font-family: 'Great Vibes', cursive;
+        }
+        
+        .message {
+            font-size: 1.8rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            max-width: 80%;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+            animation: slideUp 2s ease-in-out;
+        }
+        
+        .flower {
+            position: absolute;
+            width: 60px;
+            height: auto;
+            animation: float 5s infinite ease-in-out;
+        }
+        
+        .sunflower {
+            position: absolute;
+            width: 80px;
+            height: auto;
+            animation: rotate 4s infinite linear;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0); }
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .magic-button {
+            background: #ff4081;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .magic-button:hover {
+            background: #e91e63;
+            transform: scale(1.1);
+        }
+        
+        .footer {
+            background: #4A235A;
+            padding: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        
+        @media (max-width: 768px) {
+            .title {
+                font-size: 3rem;
+            }
+            .message {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Nuestro Amor Brilla para Siempre ❤️✨</h1>
+        <p class="message">Cada latido de mi corazón te pertenece. Eres mi felicidad infinita quiero que te quedes siempre a mi lado a pesar de todos los problemas, apesar de matarme de iras etc etc jeje en fin te amo y quiero que este dia la pases bien a mi lado. 💖</p>
+        <button class="magic-button" onclick="showSurprise()">Presiona aquí 💘</button>
+    </div>
+    
+    <img src="pngtree-beautiful-sunflowers-in-summer-png-image_6675917.png" class="flower" style="top: 10%; left: 5%;">
+    <img src="pngtree-beautiful-sunflowers-in-summer-png-image_6675917.png" class="flower" style="top: 50%; right: 5%;">
+    <img src="pngtree-beautiful-sunflowers-in-summer-png-image_6675917.png" class="sunflower" style="top: 30%; left: 40%;">
+    <img src="pngtree-beautiful-sunflowers-in-summer-png-image_6675917.png" class="sunflower" style="bottom: 20%; right: 20%;">
+    
+    <div class="footer">Con amor, Alex ❤️</div>
+    
+    <script>
+        function showSurprise() {
+            const surpriseMessage = document.createElement('div');
+            surpriseMessage.style.position = 'fixed';
+            surpriseMessage.style.top = '50%';
+            surpriseMessage.style.left = '50%';
+            surpriseMessage.style.transform = 'translate(-50%, -50%)';
+            surpriseMessage.style.background = 'rgba(255, 255, 255, 0.9)';
+            surpriseMessage.style.padding = '20px';
+            surpriseMessage.style.borderRadius = '10px';
+            surpriseMessage.style.color = '#6a0dad';
+            surpriseMessage.style.fontSize = '1.5rem';
+            surpriseMessage.style.boxShadow = '0px 4px 10px rgba(0, 0, 0, 0.3)';
+            surpriseMessage.innerText = 'Eres mi amor eterno, feliz San Valentín ❤️✨';
+            
+            document.body.appendChild(surpriseMessage);
+            
+            setTimeout(() => {
+                surpriseMessage.remove();
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
